@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "start": "node src/app.js input.json",
-        "test": "jest ",
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ", 
         "test:watch": "npm run test -- --watchAll"
     },
     "keywords": [],

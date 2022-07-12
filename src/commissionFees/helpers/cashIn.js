@@ -10,7 +10,10 @@
  * @param {Object} options.config.max
  */
 
-export const calculateCashIn = (data, options = {}) => {
+export const calculateCashIn = (
+    data = { operation: { amount: 0 } },
+    options = { percents: 0, max: { amount: 0 } }
+) => {
     const {
         operation: { amount },
     } = data;

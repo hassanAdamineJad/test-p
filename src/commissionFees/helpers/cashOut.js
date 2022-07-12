@@ -13,7 +13,7 @@ import { cashOutNatural } from './cashOutNatural.js';
 export const calculateCashOut = (function () {
     let state = {};
 
-    return (data, options = {}) => {
+    return (data, options) => {
         const { user_type } = data;
         const { configLegal, configNatural } = options;
 

@@ -3,9 +3,6 @@ import fetch from 'node-fetch';
 export class AxiosClient {
     instance;
     constructor() {
-        // apiKey: string = '',
-        // contentType: string = 'application/json',
-        // baseURLType: string = 'dev'
         this.instance = fetch;
     }
 
@@ -16,7 +13,7 @@ export class AxiosClient {
                 return result;
             })
             .catch((error) => {
-                console.error('Error:', error);
+                console.log('Error:', error);
                 return error;
             });
     }
