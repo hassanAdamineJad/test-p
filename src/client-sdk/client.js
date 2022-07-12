@@ -1,0 +1,23 @@
+import fetch from 'node-fetch';
+
+export class AxiosClient {
+    instance;
+    constructor() {
+        // apiKey: string = '',
+        // contentType: string = 'application/json',
+        // baseURLType: string = 'dev'
+        this.instance = fetch;
+    }
+
+    execute(requestConfig) {
+        return this.instance(requestConfig.url, { ...requestConfig })
+            .then((response) => response.json())
+            .then((result) => {
+                return result;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                return error;
+            });
+    }
+}
